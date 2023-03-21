@@ -4,12 +4,16 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'panzoom',
+    redirectTo: 'anvaka-panzoom',
     pathMatch: 'full'
   },
   {
     path: 'panzoom',
     loadChildren: () => import('./panzoom/panzoom.module').then( m => m.PanzoomPageModule)
+  },
+  {
+    path: 'anvaka-panzoom',
+    loadChildren: () => import('./anvaka-panzoom/anvaka-panzoom.module').then( m => m.AnvakaPanzoomPageModule)
   },
 ];
 
