@@ -29,7 +29,14 @@ export class AnvakaPanzoomPage {
   public addClickListeners() {
     const elements = Array.from(document.getElementsByClassName('clickable'));
     elements.forEach(element => {
-      element.addEventListener('click', () => console.log('CLICK REGISTERED'));
+      element.addEventListener('click', () => {
+        let sum = 0;
+        for (let i = 0; i < 100; i++) {
+          sum+=i; // just sum manual overhead to make more realistic
+        }
+        console.log(sum);
+        console.log('CLICK REGISTERED');
+      });
     });
   }
 
