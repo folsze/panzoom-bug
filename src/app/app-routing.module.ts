@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'anvaka-panzoom',
     loadChildren: () => import('./anvaka-panzoom/anvaka-panzoom.module').then( m => m.AnvakaPanzoomPageModule)
   },
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
 ];
 
 @NgModule({
